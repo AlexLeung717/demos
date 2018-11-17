@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通用样式</title>
+    <link rel="stylesheet" href="./_frontend/styles/common.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <button class="btn-filter">Demo</button>
+    <br>
+    <button class="btn-fun">Demo2</button>
+
+    <div class="data-filter" style="margin-left: 200px;margin-top: 200px;">
+        <div class="select">
+            <div class="select-title">全部终端</div>
+            <ul>
+                <li data-type="all">全部终端</li>
+                <li data-type="pc">PC端</li>
+                <li data-type="mobile">移动端</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var select = $('.select');
+            var selectTitle = $('.select-title');
+            var filterList = $('.select ul');
+
+
+            // 这里是使用mouseover和mouseout的效果 
+            // 需要注意的是，mouseout和mouseover的对象是父元素select元素的对象，需要注意的点。
+            select.mouseover(function () {
+                filterList.show();
+            })
+
+            select.mouseout(function () {
+                filterList.hide();
+            })
+
+            // 点击切换
+            select.on('click', 'ul li', function () {
+                var _this = $(this);
+                // 这里设置了data-type属性，后面可以根据这个属性 switch···case来请求数据
+                var type = _this.data('type');
+                selectTitle.text(_this.text());
+                filterList.hide();
+            })
+
+        })
+    </script>
+</body>
+
+</html>

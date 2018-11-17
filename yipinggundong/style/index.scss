@@ -1,0 +1,86 @@
+
+
+@import 'base';
+
+// 这里需要注意--要把html和body的height都设置成100%;
+// 同时还需要把pages和其各个子元素都设置为height100%
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#pages {
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    position: relative;
+}
+
+.page-item {
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    position: relative;
+}
+
+.section1 {
+    background: url(../images/1.jpg) no-repeat center center;
+
+    .content{
+        // 把每一页中的内容都居中显示--需要设置top、bottom、left、right设置为0，然后margin为auto
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 200px;
+        height: 20px;
+        font-size: 18px;
+        line-height: 18px;
+        color: #fff;
+        margin: auto;
+    }
+}
+
+.section2 {
+    background: url(../images/2.jpg) no-repeat center center;
+}
+
+.section3 {
+    background: url(../images/3.jpg) no-repeat center center;
+}
+
+.section4 {
+    background: url(../images/4.jpg) no-repeat center center;
+}
+
+ul.nav {
+    position: fixed;
+    right: 40px;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    height: 90px;
+    margin: auto;
+
+
+    li{
+        width: 10px;
+        height: 10px;
+        border: 1px solid red;
+        border-radius: 50%;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    li + li{
+        margin-top: 15px;
+    }
+
+    li.active{
+        width: 15px;
+        height: 15px;
+        background-color: red;
+    }  
+}

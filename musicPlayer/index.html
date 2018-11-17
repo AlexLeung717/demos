@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>MusicPlayer For myself</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <audio src="assets/陈奕迅-十面埋伏.mp3" controls id="aud"></audio>
+        <div class="btn-controls">
+            <button class="btn" data-type="pre">上一首</button>
+            <button class="btn" data-type="next">下一首</button>
+            <div>
+                <label for="">
+                    
+                    <input type="radio" name="playmodel" value="顺序" checked>顺序
+                    <input type="radio" name="playmodel" value="随机" class="btnRandom">随机
+                    <input type="radio" name="playmodel" value="单曲">单曲循环
+                    
+                </label>
+            </div>
+        </div>
+        <ul id="musicList">
+            <li class="active">陈奕迅-十面埋伏.mp3</li>
+            <li>周杰伦-稻香.mp3</li>
+            <li>周杰伦-简单爱.mp3</li>
+        </ul>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

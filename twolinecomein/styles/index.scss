@@ -1,0 +1,103 @@
+@import 'base';
+
+
+@import 'base';
+
+body{
+    background-color: pink;
+}
+
+.content{
+
+    width: 100%;
+    min-widht: 1200px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+
+    h1, p{
+        color: #fff;
+        font-weight: bold;
+    }
+
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+h1.title{
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    // 后面内容分别是 动画名称、动画时长、动画的速度曲线、动画延迟时间、动画结束后停留在的状态
+    -webkit-animation: title0 1s ease-in-out 100ms forwards;
+    animation: title0 1s ease-in-out 100ms forwards;   
+}
+
+p{
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-animation: p0 1s ease-in-out 100ms forwards;
+    animation: p0 1s ease-in-out 100ms forwards; 
+}
+
+
+// 注意下面是animate动画的写法
+// 同一个动画，一般带前缀的放在不带前缀的前面
+// 写完动画，在上面元素样式中，设置animation属性
+
+// 这里动画的内容是两行文字，一行从左边进入页面，一行是从右边进入页面
+// 第一行，0%时候位置是-100%，结束时100%时的位置是0 （注意这里结束时的位置是 “ 0 ”）
+// 第二行则相反
+
+@-webkit-keyframes title0 {
+    0%{
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes title0 {
+    0%{
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+
+@-webkit-keyframes p0{
+    0%{
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100%{
+        -webkit-transform: translateX(0);  
+        transform: translateX(0);   
+    }
+}
+
+@keyframes p0{
+    0%{
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100%{
+        -webkit-transform: translateX(0);  
+        transform: translateX(0);   
+    }
+}

@@ -1,0 +1,183 @@
+@import 'var';
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+div,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: '微软雅黑', 'Microsoft Yahei';
+}
+
+i,
+b,
+address {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+// 公共样式类
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        zoom: 1;
+        width: 100%;
+        height: 0;
+        clear: both;
+    }
+}
+
+p.copyright {
+    font-size: 14px;
+    color: $grayTxt;
+
+    &-login {
+        font-size: 14px;
+        color: #fff;
+    }
+}
+
+.btn {
+    color: $grayTxt;
+    border: 1px solid $borderColor;
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none; 
+    
+    // 筛选按钮 
+    &-filter {
+        @extend .btn;
+        &.active {
+            color: #fff;
+            background-color: $commonColor;
+        }
+    } 
+    
+    // 功能按钮，如删除、添加、查看等按钮
+    &-fun {
+        @extend .btn;
+        color: $commonColor;
+        border: 1px solid $commonColor;
+        border-radius: 4px;
+        transition: all .3s;
+
+        &:hover {
+            color: #fff;
+            background-color: $commonColor;
+        }
+
+        &.active {
+            color: #fff;
+            background-color: $commonColor;
+        }
+    }
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    thead {
+        background: $theadColor;
+        font-size: 14px;
+    }
+
+    tfoot {
+        td {
+            border: none;
+        }
+    }
+}
+
+// 下拉框
+.select {
+    width: 200px;
+    height: 40px;
+    border: 1px solid $borderColor;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    .select-title,
+    ul li {
+        font-size: 14px;
+        line-height: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color: #999999;
+        box-sizing: border-box;
+    }
+
+    .select-title {
+        padding-left: 14px;
+        &:after {
+            content: '';
+            position: absolute;
+            right: 11px;
+            top: 17px;
+            width: 11px;
+            height: 5px;
+            background: url('../images/select-down.png') no-repeat center center;
+        }
+    }
+
+    ul {
+        display: none;
+        position: absolute;
+        left: -1px;
+        top: 38px;
+        width: 200px;
+        list-style: none;
+        border: 1px solid $borderColor;
+        box-sizing: border-box;
+
+        li {
+            width: 198px;
+            height: 38px;
+            padding-left: 14px;
+            background-color: #fff;
+            &:hover {
+                background-color: $commonColor;
+                color: #fff;
+            }
+        }
+
+        li + li {
+            border-top: 1px solid $borderColor;
+        }
+    }
+}

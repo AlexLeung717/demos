@@ -1,0 +1,63 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body * {
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-width: 1200px;
+    background-color: #FFFFFF;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+em {
+    font-family: '宋体';
+    font-style: inherit;
+    font-weight: bold;
+}
+
+.greentxt {
+    color: #008000;
+    font-style: normal;
+}
+
+.redtxt {
+    color: #ff4f52;
+    font-style: normal;
+}
+
+.blacktxt {
+    color: #333333;
+    font-style: normal;
+}

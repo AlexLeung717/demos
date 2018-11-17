@@ -1,0 +1,38 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, ul, ol, div, p { margin: 0; padding: 0; }
+
+body { font-family: '微软雅黑', 'Microsoft Yahei'; }
+
+i, b, address { font-style: normal; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+
+ul { list-style: none; }
+
+.fleft { float: left; }
+
+.fright { float: right; }
+
+.clearfix:after { content: ''; display: block; zoom: 1; width: 100%; height: 0; clear: both; }
+
+p.copyright { font-size: 14px; color: #999; }
+p.copyright-login { font-size: 14px; color: #fff; }
+
+.btn, .btn-filter, .btn-fun { color: #999; border: 1px solid #dadada; text-align: center; background-color: #fff; box-sizing: border-box; cursor: pointer; outline: none; }
+.btn-filter.active { color: #fff; background-color: #4476e7; }
+.btn-fun { color: #4476e7; border: 1px solid #4476e7; border-radius: 4px; transition: all .3s; }
+.btn-fun:hover { color: #fff; background-color: #4476e7; }
+.btn-fun.active { color: #fff; background-color: #4476e7; }
+
+.table { width: 100%; text-align: center; border-collapse: collapse; }
+.table thead { background: #f8f8f8; font-size: 14px; }
+.table tfoot td { border: none; }
+
+.select { width: 200px; height: 40px; border: 1px solid #dadada; background-color: #fff; position: relative; cursor: pointer; box-sizing: border-box; }
+.select .select-title, .select ul li { font-size: 14px; line-height: 14px; padding-top: 12px; padding-bottom: 12px; color: #999999; box-sizing: border-box; }
+.select .select-title { padding-left: 14px; }
+.select .select-title:after { content: ''; position: absolute; right: 11px; top: 17px; width: 11px; height: 5px; background: url("../images/select-down.png") no-repeat center center; }
+.select ul { display: none; position: absolute; left: -1px; top: 38px; width: 200px; list-style: none; border: 1px solid #dadada; box-sizing: border-box; }
+.select ul li { width: 198px; height: 38px; padding-left: 14px; background-color: #fff; }
+.select ul li:hover { background-color: #4476e7; color: #fff; }
+.select ul li + li { border-top: 1px solid #dadada; }
